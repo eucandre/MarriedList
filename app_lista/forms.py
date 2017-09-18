@@ -14,8 +14,8 @@ class FormPresente(forms.ModelForm):
         fields = ('nome','valor')
 
 class FormDesejos(forms.ModelForm):
-    casal= forms.ModelChoiceField(label='Casal', queryset=Desejos.objects.all(), widget=forms.Select(attrs={'type':'select','class':'form-control'}))
-    desejo = forms.ModelMultipleChoiceField(label='Desejo(s)',queryset=Desejos.objects.all(), widget=forms.CheckboxSelectMultiple(attrs={'type':'select'}))
+    casal= forms.ModelChoiceField(label='Casal', queryset=Casal.objects.all(), widget=forms.Select({'class':'form-control'}))
+    desejo = forms.ModelMultipleChoiceField(label='Desejo(s)',queryset=Presente.objects.all(), widget=forms.CheckboxSelectMultiple(attrs={'type':'select'}))
     class Meta:
         model = Desejos
         fields = ('casal', 'desejo')

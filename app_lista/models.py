@@ -20,6 +20,5 @@ class Desejos(models.Model):
     casal = models.ForeignKey(Casal)
     desejo = models.ManyToManyField(Presente)
 
-
     def __unicode__(self):
-        return self.desejo.__str__()
+        return self.casal.__str__()

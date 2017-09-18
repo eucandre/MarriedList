@@ -2,13 +2,12 @@
 {% block titulo %}Cadastro de desejos do casal{% endblock %}
 {% block titulo_corpo_pagina %}Cadastro da Lista{% endblock %}
 {% block conteudo %}
-    <form action="" method="post">
+    <form action="." method="post">
         {% csrf_token %}
             {{ form.casal.label_tag }}
             {{ form.casal }}
             {{ form.desejo.label_tag }}
             {{ form.desejo }}
-
         <br />
         <div class="col-md-4 col-sm-6">
             <button type="submit" class="btn btn-success">Enviar</button>
