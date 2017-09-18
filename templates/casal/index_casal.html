@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block titulo %}Cadastro de desejos{% endblock %}
+{% block titulo_corpo_pagina %}
+    Registro do casamento
+{% endblock %}
+
+{% block conteudo %}
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="col-md-4 col-sm-6">{{ form.nome.label_tag }}
+        {{ form.nome }}
+        </div>
+        <div class="col-md-4 col-sm-6">{{ form.data_evento.label_tag }}
+        {{ form.data_evento }}
+        </div><br />
+        <div class="col-md-4 col-sm-6">
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+    </form>
+{% endblock %}
